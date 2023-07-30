@@ -24,10 +24,4 @@ internal class PlayerInput
 
         return guess;
     }
-
-    public static void EndGame()
-    {
-        Console.WriteLine("\n\nPress any key to exit.");
-        Console.ReadKey();
-    }
 }
