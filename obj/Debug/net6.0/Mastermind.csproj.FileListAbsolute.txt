@@ -18,7 +18,6 @@ C:\Users\ACER\Source\Repos\MastermindConsoleApp\bin\Debug\net6.0\Mastermind.deps
 C:\Users\ACER\Source\Repos\MastermindConsoleApp\bin\Debug\net6.0\Mastermind.runtimeconfig.json
 C:\Users\ACER\Source\Repos\MastermindConsoleApp\bin\Debug\net6.0\Mastermind.dll
 C:\Users\ACER\Source\Repos\MastermindConsoleApp\bin\Debug\net6.0\Mastermind.pdb
-C:\Users\ACER\Source\Repos\MastermindConsoleApp\obj\Debug\net6.0\Mastermind.csproj.AssemblyReference.cache
 C:\Users\ACER\Source\Repos\MastermindConsoleApp\obj\Debug\net6.0\Mastermind.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\ACER\Source\Repos\MastermindConsoleApp\obj\Debug\net6.0\Mastermind.AssemblyInfoInputs.cache
 C:\Users\ACER\Source\Repos\MastermindConsoleApp\obj\Debug\net6.0\Mastermind.AssemblyInfo.cs
