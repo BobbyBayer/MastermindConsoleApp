@@ -2,8 +2,12 @@
 
 internal class GameProcess
 {
-    public static void RunGame(int gameDigits, int numberOfGuesses, int[] answer)
+    public static void RunGame()
     {
+        var gameDigits = GameSettings.gameDigits;
+        var numberOfGuesses = GameSettings.numberOfGuesses;
+        var answer = GameInitializer.GenerateAnswer();
+
         Console.WriteLine("\nTake your first guess!");
 
         var stopGame = false;
@@ -48,6 +52,8 @@ internal class GameProcess
             }
         }
 
-        PlayerInput.EndGame();
+        Console.WriteLine("\nPress any key to go to main menu.");
+        Console.ReadKey();
+        MainScreen.TitleScreen();
     }
 }
