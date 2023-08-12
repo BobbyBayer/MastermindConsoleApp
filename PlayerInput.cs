@@ -2,22 +2,23 @@
 
 internal class PlayerInput
 {
-    public static int[] GetGuess(int gameDigits)
+    public static char[] GetGuess(int gameCharactersCount)
     {
-        var guess = new int[gameDigits];
+        var guess = new char[gameCharactersCount];
 
-        for (var i = 0; i < gameDigits; i++)
+        for (var i = 0; i < gameCharactersCount; i++)
         {
-            if (int.TryParse(Console.ReadKey().KeyChar.ToString(), out var result))
+            var readKey = Console.ReadKey().KeyChar;
+            if (readKey.ToString().All(char.IsLetterOrDigit))
             {
-                guess[i] = result;
+                guess[i] = char.ToLower(readKey);
             }
             else
             {
-                Console.WriteLine("\nYou can only enter numeric digits.\n" +
+                Console.WriteLine($"\nYou can only enter {GameSettings.answerContent} characters.\n" +
                                   "Enter a new guess.");
 
-                guess = new int[gameDigits];
+                guess = new char[gameCharactersCount];
                 i = -1;
             }
         }

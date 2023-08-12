@@ -4,20 +4,21 @@ internal class GameProcess
 {
     public static void RunGame()
     {
-        var gameDigits = GameSettings.gameDigits;
+        var numberOfCharacters = GameSettings.numberOfCharacters;
         var numberOfGuesses = GameSettings.numberOfGuesses;
         var answer = GameInitializer.GenerateAnswer();
+        Console.WriteLine("\n" + string.Join(' ', answer));
 
         Console.WriteLine("\nTake your first guess!");
 
         var stopGame = false;
         while (stopGame.Equals(false))
         {
-            var guess = PlayerInput.GetGuess(gameDigits);
+            var guess = PlayerInput.GetGuess(numberOfCharacters);
             numberOfGuesses--;
 
             var result = "";
-            for (var i = 0; i < gameDigits; i++)
+            for (var i = 0; i < numberOfCharacters; i++)
             {
                 if (guess[i].Equals(answer[i]))
                 {
@@ -33,7 +34,7 @@ internal class GameProcess
                 }
             }
 
-            if (result.Equals(new string('+', gameDigits)))
+            if (result.Equals(new string('+', numberOfCharacters)))
             {
                 Console.WriteLine("\n\nYou have won the game!!!");
                 stopGame = true;
